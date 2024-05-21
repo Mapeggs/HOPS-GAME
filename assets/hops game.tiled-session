@@ -9,7 +9,7 @@
     ],
     "fileStates": {
         "": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "C:/Users/lelin/Desktop/PlatformImprovement/assets/platformer-level-1.tmx": {
@@ -53,7 +53,8 @@
             "scaleInEditor": 1
         },
         "hops.tmj#generalBackground": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "hops.tmj#rockBackground": {
             "scaleInDock": 1
