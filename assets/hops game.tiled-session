@@ -38,11 +38,11 @@
             "scaleInDock": 1
         },
         "hops.tmj": {
-            "scale": 1,
-            "selectedLayer": 3,
+            "scale": 1.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 70.5,
-                "y": 1472.5
+                "x": 105.66666666666669,
+                "y": 1472.3333333333333
             }
         },
         "hops.tmj#General-n-Platforms": {
@@ -66,8 +66,8 @@
     "map.fixedSize": true,
     "map.height": 180,
     "map.lastUsedFormat": "json",
-    "map.tileHeight": 9,
-    "map.tileWidth": 9,
+    "map.tileHeight": 18,
+    "map.tileWidth": 18,
     "map.width": 20,
     "openFiles": [
         "hops.tmj"
