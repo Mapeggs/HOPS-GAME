@@ -7,6 +7,7 @@
     "expandedProjectPaths": [
         "."
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "": {
             "scaleInDock": 2,
@@ -37,12 +38,32 @@
         "hops-tilemap.tmj#ground-platforms": {
             "scaleInDock": 1
         },
-        "hops.tmj": {
-            "scale": 1.5,
+        "hops.json": {
+            "scale": 0.17094135802469135,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 105.66666666666669,
-                "y": 1472.3333333333333
+                "x": 178.4237609461045,
+                "y": 1617.5137672655053
+            }
+        },
+        "hops.json#Ground-n-Platforms": {
+            "scaleInDock": 1
+        },
+        "hops.json#generalBackground": {
+            "scaleInDock": 1
+        },
+        "hops.json#rockBackground": {
+            "scaleInDock": 1
+        },
+        "hops.json#stoneBackground": {
+            "scaleInDock": 1
+        },
+        "hops.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 115.33333333333331,
+                "y": 610
             }
         },
         "hops.tmj#General-n-Platforms": {
@@ -76,6 +97,7 @@
     "project": "hops game.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "hops.json",
         "hops.tmj",
         "C:/Users/lelin/Desktop/PlatformImprovement/assets/platformer-level-1.tmx",
         "hops-tilemap.tmj"
