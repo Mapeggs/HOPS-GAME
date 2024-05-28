@@ -13,10 +13,10 @@
         },
         "hops_tiledmap.tmj": {
             "scale": 0.75,
-            "selectedLayer": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 204.66666666666669,
-                "y": 563.3333333333333
+                "x": 200.66666666666669,
+                "y": 3582
             }
         },
         "hops_tiledmap.tmj#Ground-n-Platforms": {
@@ -35,8 +35,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 203.33333333333331,
-                "y": 559.3333333333333
+                "x": 201.99999999999997,
+                "y": 555.3333333333333
             }
         },
         "hops_tiledmap.tmx#Ground-n-Platforms": {
@@ -66,8 +66,8 @@
     "project": "hops_tiled_project.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "hops_tiledmap.tmx",
-        "hops_tiledmap.tmj"
+        "hops_tiledmap.tmj",
+        "hops_tiledmap.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.tileSize": {

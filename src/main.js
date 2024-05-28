@@ -20,7 +20,7 @@ let config = {
             }
         }
     },
-    width: 1440,
+    width: 640,
     height: 900,
     scene: [Load, Hops]
 }
