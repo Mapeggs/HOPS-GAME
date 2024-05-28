@@ -9,7 +9,13 @@ class Load extends Phaser.Scene {
         this.load.image("tilemap_stone", "tilemap_stone_packed.png");
         this.load.image("tilemap_rock", "tilemap_rock_packed.png");
         this.load.image("tilemap_tiles", "tilemap_packed.png");
-        this.load.tilemapTiledJSON("hops", "hops.tmj");
+        this.load.tilemapTiledJSON("map", "hops_tiledmap.tmj");
+
+        //Load the tilemap as a spritesheet
+        this.load.spritesheet("tilemap_sheet", "tilemap_packed.png", {
+            frameWidth: 18,
+            frameHeight: 18
+        });
     }
 
 
@@ -19,7 +25,9 @@ class Load extends Phaser.Scene {
     create() {
  
     }
-    // Never get here since a new scene is started in create()
+
+
+    
     update() {
     }
 }

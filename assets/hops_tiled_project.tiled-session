@@ -1,0 +1,77 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "hops_tiledmap.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInEditor": 1
+        },
+        "hops_tiledmap.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 204.66666666666669,
+                "y": 563.3333333333333
+            }
+        },
+        "hops_tiledmap.tmj#Ground-n-Platforms": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmj#generalBackground": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmj#rockBackground": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmj#stoneBackground": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 203.33333333333331,
+                "y": 559.3333333333333
+            }
+        },
+        "hops_tiledmap.tmx#Ground-n-Platforms": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmx#generalBackground": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmx#rockBackground": {
+            "scaleInDock": 1
+        },
+        "hops_tiledmap.tmx#stoneBackground": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/lelin/Desktop/HOPS-GAME/assets",
+    "last.imagePath": "C:/Users/lelin/Desktop/HOPS-GAME/assets",
+    "map.height": 160,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 18,
+    "map.tileWidth": 18,
+    "map.width": 20,
+    "openFiles": [
+        "hops_tiledmap.tmx"
+    ],
+    "project": "hops_tiled_project.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "hops_tiledmap.tmx",
+        "hops_tiledmap.tmj"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 18,
+        "width": 18
+    }
+}
