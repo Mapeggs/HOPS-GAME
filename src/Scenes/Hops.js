@@ -19,9 +19,7 @@ class Hops extends Phaser.Scene {
         this.rightBoundary = 18 * 20; // Right boundary of the map (width of the map in pixels)
 
 
-         // Initialize coin collection count
-         this.totalCoins = 12; // Total number of coins in the game
-         this.coinsCollected = 0; // Coins collected so far
+
     }
 
 
@@ -89,9 +87,7 @@ class Hops extends Phaser.Scene {
         // Add overlap handler for collecting coins
         this.physics.add.overlap(my.sprite.player, this.coinGroup, (player, coin) => {
             coin.destroy(); // Remove coin on overlap
-            this.coinsCollected++; // Increment the coin collection count
-            this.updateCoinText(); // Update the coin count text
-            this.checkCoinsRemaining(); // Check if all coins are collected
+
         });
 
         
@@ -184,9 +180,7 @@ class Hops extends Phaser.Scene {
         }        
     }
 
-    updateCoinText() {
-        this.coinText.setText(`${this.coinsCollected}/${this.totalCoins} coins collected`);
-    }
+
    
     displayTemporaryText(text, x, y, duration) {
         // Create text at the specified position
@@ -198,26 +192,6 @@ class Hops extends Phaser.Scene {
         });
     }
 
-    // New method to check remaining coins and end game if all are collected
-    checkCoinsRemaining() {
-        if (this.coinGroup.countActive(true) === 0) {
-            this.endGame();
-        }
-    }
 
-    // New method to handle end game logic
-    endGame() {
-        // Display end game message
-        this.displayTemporaryText("All Coins Collected! You Win!", this.cameras.main.width / 2, this.cameras.main.height / 2, 5000);
-    
-        // Optionally, stop the player from moving
-        my.sprite.player.setVelocity(0, 0);
-        my.sprite.player.setAcceleration(0, 0);
-
-        // Optionally, stop other game updates
-        this.physics.pause();
-
-        // You can also add other end game logic here (e.g., transition to a new scene)
-    }
 
 }
