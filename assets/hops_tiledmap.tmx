@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="160" tilewidth="18" tileheight="18" infinite="0" nextlayerid="6" nextobjectid="15">
  <editorsettings>
-  <export format="json"/>
+  <export target="hops_tiledmap.tmj" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="generalBackground" tilewidth="18" tileheight="18" tilecount="40" columns="10">
   <image source="tilemap_backgrounds_packed.png" width="192" height="72"/>
@@ -499,7 +499,7 @@
 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
 </data>
  </layer>
- <layer id="2" name="Decor" width="20" height="160">
+ <layer id="2" name="Decor" width="20" height="160" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,152,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

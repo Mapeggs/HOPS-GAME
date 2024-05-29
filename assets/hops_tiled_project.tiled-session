@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "hops_tiledmap.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
         "."
     ],
@@ -15,15 +15,16 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 200.66666666666669,
-                "y": 3582
+                "x": 170,
+                "y": 1090
             }
         },
         "hops_tiledmap.tmj#Ground-n-Platforms": {
             "scaleInDock": 1
         },
         "hops_tiledmap.tmj#generalBackground": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "hops_tiledmap.tmj#rockBackground": {
             "scaleInDock": 1
@@ -32,11 +33,11 @@
             "scaleInDock": 1
         },
         "hops_tiledmap.tmx": {
-            "scale": 0.75,
+            "scale": 0.33,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 201.99999999999997,
-                "y": 555.3333333333333
+                "x": 256.0606060606061,
+                "y": 2125.757575757576
             }
         },
         "hops_tiledmap.tmx#Ground-n-Platforms": {
@@ -61,7 +62,7 @@
     "map.tileWidth": 18,
     "map.width": 20,
     "openFiles": [
-        "hops_tiledmap.tmx"
+        "hops_tiledmap.tmj"
     ],
     "project": "hops_tiled_project.tiled-project",
     "property.type": "bool",

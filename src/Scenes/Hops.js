@@ -7,11 +7,16 @@ class Hops extends Phaser.Scene {
     init() {
         // variables and settings
         this.ACCELERATION = 400;
-        this.DRAG = 500;    // DRAG < ACCELERATION = icy slide
+        this.DRAG = 1000;    // DRAG < ACCELERATION = icy slide
         this.physics.world.gravity.y = 1500;
         this.JUMP_VELOCITY = -600;
         this.PARTICLE_VELOCITY = 50;
         this.SCALE = 2.0;
+
+
+
+        this.leftBoundary = 0; // Left boundary of the map
+        this.rightBoundary = 18 * 20; // Right boundary of the map (width of the map in pixels)
     }
 
 
@@ -59,10 +64,11 @@ class Hops extends Phaser.Scene {
         this.coinGroup = this.add.group(this.coins);
 
         // Set up player avatar at the bottom of the tilemap
-        const spawnX = 360; // Example X-coordinate
-        const spawnY = this.map.heightInPixels - 100; // Adjust 100 to fit the player's height as needed
-        my.sprite.player = this.physics.add.sprite(spawnX, spawnY, "hops_characters", "tile_0000.png");
-        my.sprite.player.setCollideWorldBounds(true);
+        my.sprite.player = this.physics.add.sprite(150, 2700, "hops_characters", "tile_0000.png");
+        my.sprite.player.setCollideWorldBounds(false);
+
+        // Display the initial message "JUMP UP!" at the player's position for 3 seconds
+        this.displayTemporaryText("     JUMP UP!,\n press r to reset", my.sprite.player.x - 150, my.sprite.player.y - 125, 3000); // Adjust y-coordinate to place text slightly above the player
  
 
         // Enable collision handling
@@ -90,7 +96,11 @@ class Hops extends Phaser.Scene {
         this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
         this.cameras.main.startFollow(my.sprite.player, true, 0.25, 0.25); // (target, [,roundPixels][,lerpX][,lerpY])
         this.cameras.main.setDeadzone(50, 50);
-        this.cameras.main.setZoom(this.SCALE);        
+        this.cameras.main.setZoom(this.SCALE);
+        
+        
+
+    
 
     }
 
@@ -98,7 +108,76 @@ class Hops extends Phaser.Scene {
 
     
     update() {
-    
+        // Check if the player is trying to move outside the left boundary
+        if (my.sprite.player.x < this.leftBoundary) {
+            my.sprite.player.x = this.leftBoundary;
+            my.sprite.player.setVelocityX(0); // Stop the player's horizontal movement
+        }
+
+        // Check if the player is trying to move outside the right boundary
+        if (my.sprite.player.x > this.rightBoundary) {
+            my.sprite.player.x = this.rightBoundary;
+            my.sprite.player.setVelocityX(0); // Stop the player's horizontal movement
+        }        
+        
+        if(cursors.left.isDown) {
+            my.sprite.player.setAccelerationX(-this.ACCELERATION);
+            my.sprite.player.resetFlip();
+            my.sprite.player.anims.play('walk', true);
+            // TODO: add particle following code here
+
+
+            // Only play smoke effect if touching the ground
+
+        } else if(cursors.right.isDown) {
+            my.sprite.player.setAccelerationX(this.ACCELERATION);
+            my.sprite.player.setFlip(true, false);
+            my.sprite.player.anims.play('walk', true);
+            // TODO: add particle following code here
+
+
+
+        } else {
+            // Set acceleration to 0 and have DRAG take over
+            my.sprite.player.setAccelerationX(0);
+            my.sprite.player.setDragX(this.DRAG);
+            my.sprite.player.anims.play('idle');
+            // TODO: have the vfx stop playing
+            // TODO: set acceleration to 0 and have DRAG take over
+
+            my.sprite.player.setAccelerationX(0);
+
+            my.sprite.player.setDragX(this.DRAG);
+
+            my.sprite.player.anims.play('idle');
+
+            
+        }
+
+        // player jump
+        // note that we need body.blocked rather than body.touching b/c the former applies to tilemap tiles and the latter to the "ground"
+        if(!my.sprite.player.body.blocked.down) {
+            my.sprite.player.anims.play('jump');
+        }
+        if(my.sprite.player.body.blocked.down && Phaser.Input.Keyboard.JustDown(cursors.up)) {
+            my.sprite.player.body.setVelocityY(this.JUMP_VELOCITY);
+        }
+
+        if(Phaser.Input.Keyboard.JustDown(this.rKey)) {
+            this.scene.restart();
+        }        
+    }
+
+
+   
+    displayTemporaryText(text, x, y, duration) {
+        // Create text at the specified position
+        let tempText = this.add.text(x, y, text, { fontSize: '32px', fill: '#000000' });
+
+        // Remove text after the specified duration
+        this.time.delayedCall(duration, () => {
+            tempText.destroy();
+        });
     }
 
 }

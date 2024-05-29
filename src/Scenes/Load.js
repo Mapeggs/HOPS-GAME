@@ -35,7 +35,7 @@ class Load extends Phaser.Scene {
             frames: this.anims.generateFrameNames('hops_characters', {
                 prefix: "tile_",
                 start: 0,
-                end: 3,
+                end: 1,
                 suffix: ".png",
                 zeroPad: 4
             }),
