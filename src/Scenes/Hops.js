@@ -6,8 +6,8 @@ class Hops extends Phaser.Scene {
     init() {
         // Variables and settings
         this.ACCELERATION = 400;
-        this.DRAG = 1000; // DRAG < ACCELERATION = icy slide
-        this.physics.world.gravity.y = 100; //noral setting is 1500 
+        this.DRAG = 3000; // DRAG < ACCELERATION = icy slide
+        this.physics.world.gravity.y = 1500; //noral setting is 1500 
         this.JUMP_VELOCITY = -600;
         this.PARTICLE_VELOCITY = 50;
         this.SCALE = 2.0;
@@ -78,7 +78,7 @@ class Hops extends Phaser.Scene {
         // Create the score text
         this.scoreBox = this.add.rectangle(260, 242, 150, 18, 0x2cc5f6).setScrollFactor(0);
 //        this.scoreText = this.add.text(185, 230,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
-        this.scoreText = this.add.text(190, 235,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
+        this.scoreText = this.add.text(190, 235,'Coins Collected ' + this.score + '/12', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
 
 
         // Add camera code
@@ -147,7 +147,7 @@ class Hops extends Phaser.Scene {
         this.sound.play('sfxCoin');
         coin.destroy(); // Remove coin on overlap
         this.score +=1;
-        this.scoreText.setText('Coins Collected ' + this.score + '/6');
+        this.scoreText.setText('Coins Collected ' + this.score + '/12');
     }
 
     displayTemporaryText(text, x, y, duration) {

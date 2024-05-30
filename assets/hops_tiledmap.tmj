@@ -517,7 +517,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 205,
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -536,7 +536,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 215,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -691,7 +691,6 @@
         {
          "draworder":"topdown",
          "id":4,
-         "locked":true,
          "name":"Objects",
          "objects":[
                 {
@@ -705,6 +704,138 @@
                  "width":18,
                  "x":180,
                  "y":2700
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":15,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":90,
+                 "y":2556
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":17,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":234,
+                 "y":2484
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":18,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":162,
+                 "y":2142
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":19,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":126,
+                 "y":1692
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":20,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":216,
+                 "y":1422
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":21,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":72,
+                 "y":1152
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":22,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":234,
+                 "y":882
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":23,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":0,
+                 "y":630
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":24,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":90,
+                 "y":522
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":25,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":198,
+                 "y":342
+                }, 
+                {
+                 "gid":192,
+                 "height":18,
+                 "id":26,
+                 "name":"coin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18,
+                 "x":18,
+                 "y":54
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -713,7 +844,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":15,
+ "nextobjectid":27,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
