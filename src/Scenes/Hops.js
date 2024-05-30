@@ -76,18 +76,30 @@ class Hops extends Phaser.Scene {
         }, this);
 
         // Create the score text
-        this.scoreText = this.add.text(185, 230,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
+        this.scoreBox = this.add.rectangle(260, 242, 150, 18, 0x2cc5f6).setScrollFactor(0);
+//        this.scoreText = this.add.text(185, 230,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
+        this.scoreText = this.add.text(190, 235,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
+
 
         // Add camera code
         this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
-        this.cameras.main.startFollow(my.sprite.player, true, 0.25, 0.25);
+//        this.cameras.main.startFollow(my.sprite.player, true, 0.25, 0.25);
         this.cameras.main.setDeadzone(50, 50);
         this.cameras.main.setZoom(this.SCALE);
 
+        // Fixing camera
+        // https://gamedev.stackexchange.com/questions/157869/one-pixel-lines-flash-on-tile-map-when-camera-moves
+        // used code from this site 
+        // Removes lines that render when sprite player is being followed, anchors the camera to a point instead of the sprite 
+        this.cameraDolly = new Phaser.Geom.Point(my.sprite.player.x, my.sprite.player.y);
+        this.cameras.main.startFollow(this.cameraDolly);
 
     }
 
     update() {
+        // calculating sprite point for camera 
+        this.cameraDolly.x = Math.floor(my.sprite.player.x);
+        this.cameraDolly.y = Math.floor(my.sprite.player.y);
         // Check boundaries
         if (my.sprite.player.x < this.leftBoundary) {
             my.sprite.player.x = this.leftBoundary;
@@ -119,6 +131,7 @@ class Hops extends Phaser.Scene {
             my.sprite.player.anims.play('jump');
         }
         if (my.sprite.player.body.blocked.down && Phaser.Input.Keyboard.JustDown(cursors.up)) {
+            this.sound.play('sfxJump');
             my.sprite.player.body.setVelocityY(this.JUMP_VELOCITY);
         }
 
@@ -131,6 +144,7 @@ class Hops extends Phaser.Scene {
     }
 
     collectCoin(player, coin) {
+        this.sound.play('sfxCoin');
         coin.destroy(); // Remove coin on overlap
         this.score +=1;
         this.scoreText.setText('Coins Collected ' + this.score + '/6');
