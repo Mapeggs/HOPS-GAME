@@ -80,7 +80,6 @@ class Hops extends Phaser.Scene {
 //        this.scoreText = this.add.text(185, 230,'Coins Collected ' + this.score + '/6', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
         this.scoreText = this.add.text(190, 235,'Coins Collected ' + this.score + '/12', { fontSize: '12px', fill: '#000' }).setScrollFactor(0);
 
-
         // Add camera code
         this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
 //        this.cameras.main.startFollow(my.sprite.player, true, 0.25, 0.25);

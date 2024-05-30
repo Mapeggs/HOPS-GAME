@@ -17,9 +17,11 @@ class Load extends Phaser.Scene {
         this.load.image("tilemap_rock", "tilemap_rock_packed.png");
         this.load.image("tilemap_tiles", "tilemap_packed.png");
         this.load.tilemapTiledJSON("map", "hops_tiledmap.tmj");
-        this.load.audio('sfxJump','jumpingHOPS.ogg')
-        this.load.audio('sfxCoin','coinsHOPS.ogg')
-
+        // Load audio
+        this.load.audio('sfxJump','jumpingHOPS.ogg');
+        this.load.audio('sfxCoin','coinsHOPS.ogg');
+        // Load particle
+        this.load.image('particle', 'particle.png');
         //Load the tilemap as a spritesheet
         this.load.spritesheet("tilemap_sheet", "tilemap_packed.png", {
             frameWidth: 18,
